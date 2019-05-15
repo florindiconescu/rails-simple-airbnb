@@ -1,0 +1,13 @@
+<h1>All our Flats</h1>
+<p>We have <%= @flats.length %> flats on our website.</p>
+<% @flats.each do |flat| %>
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="https://source.unsplash.com/1600x900/?rooms" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title"><%= flat.name %></h4>
+      <p class="card-text"><%= flat.address %></p>
+      <p class="card-text"><i class="fas fa-user-friends"></i> <%= flat.number_of_guests %> <i class="fas fa-euro-sign"></i> <%= flat.price_per_night %></p>
+      <a href="#" class="btn btn-primary">More info</a>
+    </div>
+  </div>
+<% end %>
